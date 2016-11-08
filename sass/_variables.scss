@@ -2,6 +2,8 @@ $item-display-duration: 5 !default; //seconds
 $transition-duration: 2 !default; // seconds
 $display-duration: $transition-duration + $item-display-duration;
 
+$gallery-class-name: 'gallery' !default;
+
 $gallery-inactive-color: #ccc !default;
 $gallery-inactive-transparent-color: white !default;
 $gallery-inactive-opacity: 0.4 !default;
