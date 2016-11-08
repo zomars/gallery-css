@@ -4,21 +4,32 @@
 	Theme controls how everything looks in Gallery CSS.
 */
 
-.gallery {
+.#{$gallery-class-name} {
 	position: relative;
 
-  .item { height: 400px; overflow: hidden; text-align: center; background: #4d87e2; }
-	.controls { position: absolute; bottom: 0; width: 100%; text-align: center; }
+  .#{$gallery-class-name}__item {
+    height: 400px;
+    overflow: hidden;
+    text-align: center;
+    background: #4d87e2;
+  }
 
-	.control-button {
+	.#{$gallery-class-name}__controls {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+	.#{$gallery-class-name}__control-button {
 		display: inline-block; margin: 0 .02em;
 		font-size: 3em;
 
-		@extend %inactive-button;
+		@include inactive-button;
 
 		text-align: center; text-decoration: none;
 		transition: color .1s;
 
-		&:hover { @extend %active-button; }
+		&:hover { @include active-button; }
 	}
 }

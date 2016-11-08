@@ -22,7 +22,7 @@
 	.#{$gallery-class-name} {
 		@for $j from 1 through $item-count {
 			.control-operator:nth-of-type(#{$j}):target ~ .item:nth-of-type(#{$j}) { pointer-events: auto; opacity: 1; }
-			.control-operator:nth-of-type(#{$j}):target ~ .controls .control-button:nth-of-type(#{$j}) { @extend %active-button; }
+			.control-operator:nth-of-type(#{$j}):target ~ .controls .control-button:nth-of-type(#{$j}) { @include active-button; }
 		}
 	}
 
@@ -70,12 +70,12 @@
       }
 
       ~ .controls .control-button {
-        @extend %inactive-button;
+        @include inactive-button;
 
         animation: none; // Kill button animation when there is a selected image
       }
     }
   }
 
-	.#{$gallery-class-name}__control-button:first-of-type { @extend %active-button; }
+	.#{$gallery-class-name}__control-button:first-of-type { @include active-button; }
 }

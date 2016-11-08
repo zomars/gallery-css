@@ -20,11 +20,3 @@ $gallery-active-opacity: 0.8 !default;
   color: $gallery-active-color;
   color: rgba($gallery-active-transparent-color, $gallery-active-opacity);
 }
-
-%inactive-button {
-  @include inactive-button;
-}
-
-%active-button {
-  @include active-button;
-}
