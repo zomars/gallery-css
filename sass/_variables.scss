@@ -1,6 +1,6 @@
-$item-display-duration: 5 !default; //seconds
-$transition-duration: 2 !default; // seconds
-$display-duration: $transition-duration + $item-display-duration;
+$gallery-item-display-duration: 5 !default; //seconds
+$gallery-transition-duration: 2 !default; // seconds
+$gallery-display-duration: $gallery-transition-duration + $gallery-item-display-duration;
 
 $gallery-class-name: 'gallery' !default;
 

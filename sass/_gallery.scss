@@ -1,21 +1,21 @@
 @import "variables";
 
 @mixin gallery( $item-count ) {
-	$total-duration: $display-duration * $item-count;
+	$total-duration: $gallery-display-duration * $item-count;
 
 	@keyframes controlAnimation-#{$item-count} {
 		0% { @include inactive-button; }
-	  #{100% * $transition-duration / $total-duration},
-	  #{100% * $display-duration / $total-duration} { @include active-button; }
-	  #{100% * ($display-duration + $transition-duration) / $total-duration},
+	  #{100% * $gallery-transition-duration / $total-duration},
+	  #{100% * $gallery-display-duration / $total-duration} { @include active-button; }
+	  #{100% * ($gallery-display-duration + $gallery-transition-duration) / $total-duration},
 	  100% { @include inactive-button; }
 	}
 
 	@keyframes galleryAnimation-#{$item-count} {
 	  0% { opacity: 0; }
-	  #{100% * $transition-duration / $total-duration},
-	  #{100% * $display-duration / $total-duration} { opacity: 1; }
-	  #{100% * ($display-duration + $transition-duration) / $total-duration},
+	  #{100% * $gallery-transition-duration / $total-duration},
+	  #{100% * $gallery-display-duration / $total-duration} { opacity: 1; }
+	  #{100% * ($gallery-display-duration + $gallery-transition-duration) / $total-duration},
 	  100% { opacity: 0; }
 	}
 
@@ -33,7 +33,7 @@
 		@for $j from 1 through $item-count {
 			.control-button:nth-of-type(#{$j}),
 			.item:nth-of-type(#{$j}) {
-				$delay: #{($j - 1) * ($display-duration) - $transition-duration}s;
+				$delay: #{($j - 1) * ($gallery-display-duration) - $gallery-transition-duration}s;
 
 				animation-delay: #{$delay};
 			}
