@@ -1,4 +1,4 @@
-.gallery .gallery__item {
+.gallery__item {
   position: absolute;
   top: 0;
   left: 0;
@@ -8,25 +8,27 @@
   opacity: 0;
   transition: opacity .5s;
 }
-.gallery .gallery__item:first-of-type {
+.gallery__item:first-of-type {
   position: static;
   pointer-events: auto;
   opacity: 1;
 }
-.gallery .gallery__control-operator {
+
+.gallery__control-operator {
   display: none;
 }
-.gallery .gallery__control-operator:target ~ .item {
+.gallery__control-operator:target ~ .gallery__item {
   pointer-events: none;
   opacity: 0;
   animation: none;
 }
-.gallery .gallery__control-operator:target ~ .controls .control-button {
+.gallery__control-operator:target ~ .gallery__controls .gallery__control-button {
   color: #cccccc;
   color: rgba(255, 255, 255, 0.4);
   animation: none;
 }
-.gallery .gallery__control-button:first-of-type {
+
+.gallery__control-button:first-of-type {
   color: white;
   color: rgba(255, 255, 255, 0.8);
 }
@@ -66,35 +68,35 @@
   }
 }
 
-.gallery .control-operator:nth-of-type(1):target ~ .item:nth-of-type(1) {
+.gallery .gallery__control-operator:nth-of-type(1):target ~ .gallery__item:nth-of-type(1) {
   pointer-events: auto;
   opacity: 1;
 }
-.gallery .control-operator:nth-of-type(1):target ~ .controls .control-button:nth-of-type(1) {
+.gallery .gallery__control-operator:nth-of-type(1):target ~ .gallery__controls .gallery__control-button:nth-of-type(1) {
   color: white;
   color: rgba(255, 255, 255, 0.8);
 }
-.gallery .control-operator:nth-of-type(2):target ~ .item:nth-of-type(2) {
+.gallery .gallery__control-operator:nth-of-type(2):target ~ .gallery__item:nth-of-type(2) {
   pointer-events: auto;
   opacity: 1;
 }
-.gallery .control-operator:nth-of-type(2):target ~ .controls .control-button:nth-of-type(2) {
+.gallery .gallery__control-operator:nth-of-type(2):target ~ .gallery__controls .gallery__control-button:nth-of-type(2) {
   color: white;
   color: rgba(255, 255, 255, 0.8);
 }
 
-.gallery--2-items.autoplay .control-button {
+.gallery--2-items.autoplay .gallery__control-button {
   animation: controlAnimation-2 14s infinite;
 }
-.gallery--2-items.autoplay .item {
+.gallery--2-items.autoplay .gallery__item {
   animation: galleryAnimation-2 14s infinite;
 }
-.gallery--2-items .control-button:nth-of-type(1),
-.gallery--2-items .item:nth-of-type(1) {
+.gallery--2-items .gallery__control-button:nth-of-type(1),
+.gallery--2-items .gallery__item:nth-of-type(1) {
   animation-delay: -2s;
 }
-.gallery--2-items .control-button:nth-of-type(2),
-.gallery--2-items .item:nth-of-type(2) {
+.gallery--2-items .gallery__control-button:nth-of-type(2),
+.gallery--2-items .gallery__item:nth-of-type(2) {
   animation-delay: 5s;
 }
 
@@ -133,47 +135,47 @@
   }
 }
 
-.gallery .control-operator:nth-of-type(1):target ~ .item:nth-of-type(1) {
+.gallery .gallery__control-operator:nth-of-type(1):target ~ .gallery__item:nth-of-type(1) {
   pointer-events: auto;
   opacity: 1;
 }
-.gallery .control-operator:nth-of-type(1):target ~ .controls .control-button:nth-of-type(1) {
+.gallery .gallery__control-operator:nth-of-type(1):target ~ .gallery__controls .gallery__control-button:nth-of-type(1) {
   color: white;
   color: rgba(255, 255, 255, 0.8);
 }
-.gallery .control-operator:nth-of-type(2):target ~ .item:nth-of-type(2) {
+.gallery .gallery__control-operator:nth-of-type(2):target ~ .gallery__item:nth-of-type(2) {
   pointer-events: auto;
   opacity: 1;
 }
-.gallery .control-operator:nth-of-type(2):target ~ .controls .control-button:nth-of-type(2) {
+.gallery .gallery__control-operator:nth-of-type(2):target ~ .gallery__controls .gallery__control-button:nth-of-type(2) {
   color: white;
   color: rgba(255, 255, 255, 0.8);
 }
-.gallery .control-operator:nth-of-type(3):target ~ .item:nth-of-type(3) {
+.gallery .gallery__control-operator:nth-of-type(3):target ~ .gallery__item:nth-of-type(3) {
   pointer-events: auto;
   opacity: 1;
 }
-.gallery .control-operator:nth-of-type(3):target ~ .controls .control-button:nth-of-type(3) {
+.gallery .gallery__control-operator:nth-of-type(3):target ~ .gallery__controls .gallery__control-button:nth-of-type(3) {
   color: white;
   color: rgba(255, 255, 255, 0.8);
 }
 
-.gallery--3-items.autoplay .control-button {
+.gallery--3-items.autoplay .gallery__control-button {
   animation: controlAnimation-3 21s infinite;
 }
-.gallery--3-items.autoplay .item {
+.gallery--3-items.autoplay .gallery__item {
   animation: galleryAnimation-3 21s infinite;
 }
-.gallery--3-items .control-button:nth-of-type(1),
-.gallery--3-items .item:nth-of-type(1) {
+.gallery--3-items .gallery__control-button:nth-of-type(1),
+.gallery--3-items .gallery__item:nth-of-type(1) {
   animation-delay: -2s;
 }
-.gallery--3-items .control-button:nth-of-type(2),
-.gallery--3-items .item:nth-of-type(2) {
+.gallery--3-items .gallery__control-button:nth-of-type(2),
+.gallery--3-items .gallery__item:nth-of-type(2) {
   animation-delay: 5s;
 }
-.gallery--3-items .control-button:nth-of-type(3),
-.gallery--3-items .item:nth-of-type(3) {
+.gallery--3-items .gallery__control-button:nth-of-type(3),
+.gallery--3-items .gallery__item:nth-of-type(3) {
   animation-delay: 12s;
 }
 
@@ -212,59 +214,59 @@
   }
 }
 
-.gallery .control-operator:nth-of-type(1):target ~ .item:nth-of-type(1) {
+.gallery .gallery__control-operator:nth-of-type(1):target ~ .gallery__item:nth-of-type(1) {
   pointer-events: auto;
   opacity: 1;
 }
-.gallery .control-operator:nth-of-type(1):target ~ .controls .control-button:nth-of-type(1) {
+.gallery .gallery__control-operator:nth-of-type(1):target ~ .gallery__controls .gallery__control-button:nth-of-type(1) {
   color: white;
   color: rgba(255, 255, 255, 0.8);
 }
-.gallery .control-operator:nth-of-type(2):target ~ .item:nth-of-type(2) {
+.gallery .gallery__control-operator:nth-of-type(2):target ~ .gallery__item:nth-of-type(2) {
   pointer-events: auto;
   opacity: 1;
 }
-.gallery .control-operator:nth-of-type(2):target ~ .controls .control-button:nth-of-type(2) {
+.gallery .gallery__control-operator:nth-of-type(2):target ~ .gallery__controls .gallery__control-button:nth-of-type(2) {
   color: white;
   color: rgba(255, 255, 255, 0.8);
 }
-.gallery .control-operator:nth-of-type(3):target ~ .item:nth-of-type(3) {
+.gallery .gallery__control-operator:nth-of-type(3):target ~ .gallery__item:nth-of-type(3) {
   pointer-events: auto;
   opacity: 1;
 }
-.gallery .control-operator:nth-of-type(3):target ~ .controls .control-button:nth-of-type(3) {
+.gallery .gallery__control-operator:nth-of-type(3):target ~ .gallery__controls .gallery__control-button:nth-of-type(3) {
   color: white;
   color: rgba(255, 255, 255, 0.8);
 }
-.gallery .control-operator:nth-of-type(4):target ~ .item:nth-of-type(4) {
+.gallery .gallery__control-operator:nth-of-type(4):target ~ .gallery__item:nth-of-type(4) {
   pointer-events: auto;
   opacity: 1;
 }
-.gallery .control-operator:nth-of-type(4):target ~ .controls .control-button:nth-of-type(4) {
+.gallery .gallery__control-operator:nth-of-type(4):target ~ .gallery__controls .gallery__control-button:nth-of-type(4) {
   color: white;
   color: rgba(255, 255, 255, 0.8);
 }
 
-.gallery--4-items.autoplay .control-button {
+.gallery--4-items.autoplay .gallery__control-button {
   animation: controlAnimation-4 28s infinite;
 }
-.gallery--4-items.autoplay .item {
+.gallery--4-items.autoplay .gallery__item {
   animation: galleryAnimation-4 28s infinite;
 }
-.gallery--4-items .control-button:nth-of-type(1),
-.gallery--4-items .item:nth-of-type(1) {
+.gallery--4-items .gallery__control-button:nth-of-type(1),
+.gallery--4-items .gallery__item:nth-of-type(1) {
   animation-delay: -2s;
 }
-.gallery--4-items .control-button:nth-of-type(2),
-.gallery--4-items .item:nth-of-type(2) {
+.gallery--4-items .gallery__control-button:nth-of-type(2),
+.gallery--4-items .gallery__item:nth-of-type(2) {
   animation-delay: 5s;
 }
-.gallery--4-items .control-button:nth-of-type(3),
-.gallery--4-items .item:nth-of-type(3) {
+.gallery--4-items .gallery__control-button:nth-of-type(3),
+.gallery--4-items .gallery__item:nth-of-type(3) {
   animation-delay: 12s;
 }
-.gallery--4-items .control-button:nth-of-type(4),
-.gallery--4-items .item:nth-of-type(4) {
+.gallery--4-items .gallery__control-button:nth-of-type(4),
+.gallery--4-items .gallery__item:nth-of-type(4) {
   animation-delay: 19s;
 }
 
@@ -303,70 +305,70 @@
   }
 }
 
-.gallery .control-operator:nth-of-type(1):target ~ .item:nth-of-type(1) {
+.gallery .gallery__control-operator:nth-of-type(1):target ~ .gallery__item:nth-of-type(1) {
   pointer-events: auto;
   opacity: 1;
 }
-.gallery .control-operator:nth-of-type(1):target ~ .controls .control-button:nth-of-type(1) {
+.gallery .gallery__control-operator:nth-of-type(1):target ~ .gallery__controls .gallery__control-button:nth-of-type(1) {
   color: white;
   color: rgba(255, 255, 255, 0.8);
 }
-.gallery .control-operator:nth-of-type(2):target ~ .item:nth-of-type(2) {
+.gallery .gallery__control-operator:nth-of-type(2):target ~ .gallery__item:nth-of-type(2) {
   pointer-events: auto;
   opacity: 1;
 }
-.gallery .control-operator:nth-of-type(2):target ~ .controls .control-button:nth-of-type(2) {
+.gallery .gallery__control-operator:nth-of-type(2):target ~ .gallery__controls .gallery__control-button:nth-of-type(2) {
   color: white;
   color: rgba(255, 255, 255, 0.8);
 }
-.gallery .control-operator:nth-of-type(3):target ~ .item:nth-of-type(3) {
+.gallery .gallery__control-operator:nth-of-type(3):target ~ .gallery__item:nth-of-type(3) {
   pointer-events: auto;
   opacity: 1;
 }
-.gallery .control-operator:nth-of-type(3):target ~ .controls .control-button:nth-of-type(3) {
+.gallery .gallery__control-operator:nth-of-type(3):target ~ .gallery__controls .gallery__control-button:nth-of-type(3) {
   color: white;
   color: rgba(255, 255, 255, 0.8);
 }
-.gallery .control-operator:nth-of-type(4):target ~ .item:nth-of-type(4) {
+.gallery .gallery__control-operator:nth-of-type(4):target ~ .gallery__item:nth-of-type(4) {
   pointer-events: auto;
   opacity: 1;
 }
-.gallery .control-operator:nth-of-type(4):target ~ .controls .control-button:nth-of-type(4) {
+.gallery .gallery__control-operator:nth-of-type(4):target ~ .gallery__controls .gallery__control-button:nth-of-type(4) {
   color: white;
   color: rgba(255, 255, 255, 0.8);
 }
-.gallery .control-operator:nth-of-type(5):target ~ .item:nth-of-type(5) {
+.gallery .gallery__control-operator:nth-of-type(5):target ~ .gallery__item:nth-of-type(5) {
   pointer-events: auto;
   opacity: 1;
 }
-.gallery .control-operator:nth-of-type(5):target ~ .controls .control-button:nth-of-type(5) {
+.gallery .gallery__control-operator:nth-of-type(5):target ~ .gallery__controls .gallery__control-button:nth-of-type(5) {
   color: white;
   color: rgba(255, 255, 255, 0.8);
 }
 
-.gallery--5-items.autoplay .control-button {
+.gallery--5-items.autoplay .gallery__control-button {
   animation: controlAnimation-5 35s infinite;
 }
-.gallery--5-items.autoplay .item {
+.gallery--5-items.autoplay .gallery__item {
   animation: galleryAnimation-5 35s infinite;
 }
-.gallery--5-items .control-button:nth-of-type(1),
-.gallery--5-items .item:nth-of-type(1) {
+.gallery--5-items .gallery__control-button:nth-of-type(1),
+.gallery--5-items .gallery__item:nth-of-type(1) {
   animation-delay: -2s;
 }
-.gallery--5-items .control-button:nth-of-type(2),
-.gallery--5-items .item:nth-of-type(2) {
+.gallery--5-items .gallery__control-button:nth-of-type(2),
+.gallery--5-items .gallery__item:nth-of-type(2) {
   animation-delay: 5s;
 }
-.gallery--5-items .control-button:nth-of-type(3),
-.gallery--5-items .item:nth-of-type(3) {
+.gallery--5-items .gallery__control-button:nth-of-type(3),
+.gallery--5-items .gallery__item:nth-of-type(3) {
   animation-delay: 12s;
 }
-.gallery--5-items .control-button:nth-of-type(4),
-.gallery--5-items .item:nth-of-type(4) {
+.gallery--5-items .gallery__control-button:nth-of-type(4),
+.gallery--5-items .gallery__item:nth-of-type(4) {
   animation-delay: 19s;
 }
-.gallery--5-items .control-button:nth-of-type(5),
-.gallery--5-items .item:nth-of-type(5) {
+.gallery--5-items .gallery__control-button:nth-of-type(5),
+.gallery--5-items .gallery__item:nth-of-type(5) {
   animation-delay: 26s;
 }

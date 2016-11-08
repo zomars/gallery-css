@@ -1,7 +1,7 @@
 {
   "name": "gallery",
   "repo": "benschwarz/gallery-css",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "main": [
     "dist/gallery.css",
     "dist/gallery.min.css",
