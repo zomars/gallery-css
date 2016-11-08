@@ -112,7 +112,7 @@ module.exports = function(grunt) {
   });
 
   // Default task.
-  grunt.registerTask('default', ['clean', 'sass', 'autoprefixer', 'csslint', 'recess', 'cssmin']);
+  grunt.registerTask('default', ['clean', 'sass', 'autoprefixer', 'csslint', 'cssmin']);
 
   // Use for development
   grunt.registerTask('dev', ['connect', 'watch']);
